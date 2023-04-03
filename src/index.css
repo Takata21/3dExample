@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+    scrollbar-width: none;
+
+}
+
+.App::-webkit-scrollbar {
+    display: none;
+
+}
+
+.textStroke {
+    -webkit-text-stroke: 1px white
+}
+
+.WorkItem::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: pink;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.WorkItem:hover::after {
+    animation: moveText .5s linear both;
+
+}
+
+@keyframes moveText {
+
+    to {
+        width: 100%;
+    }
+}
